@@ -43,6 +43,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Generate index.html
+        run: |
+          echo "This URL provides Eclipse P2 installable artifacts." > p2site/index.html
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
